@@ -33,8 +33,6 @@ class Incidencia {
         agenteAsignado.revisarYAnalizar(this);
     }
 
-    
-
     public void trabajarEnResolucion() {
         // El Departamento de Servicio al Cliente trabaja en la resolución
         System.out.println("Trabajando en la resolución de la incidencia...");

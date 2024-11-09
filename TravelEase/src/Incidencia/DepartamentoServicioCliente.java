@@ -10,4 +10,11 @@ package Incidencia;
  */
 public class DepartamentoServicioCliente {
     
+    public void trabajarEnResolucion(Incidencia incidencia) {
+        System.out.println("El Departamento de Servicio al Cliente está trabajando en la resolución de la incidencia.");
+        incidencia.setEstado("Resuelto");
+        incidencia.notificarEstado("Resuelto");
+    }
+
+    
 }

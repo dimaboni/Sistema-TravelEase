@@ -22,10 +22,9 @@ class AgenteSoporte {
     public void revisarYAnalizar(Incidencia incidencia) {
         System.out.println("Revisando y analizando reporte...");
         if (!resolverProblema(incidencia)) {
-            
             escalarIncidencia(incidencia, getDepartment());
         } else {
-            incidencia.notificarEstado();
+            incidencia.notificarEstado("Resuelto");
         }
     }
 
