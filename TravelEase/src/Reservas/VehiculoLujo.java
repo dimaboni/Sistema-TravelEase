@@ -4,11 +4,10 @@
  */
 package Reservas;
 
-public class Proveedor {
+/**
+ *
+ * @author richardo
+ */
+public class VehiculoLujo extends Vehiculo{
     
-    private String nombre;
-
-    public Proveedor(String nombre) {
-        this.nombre = nombre;
-    }
 }

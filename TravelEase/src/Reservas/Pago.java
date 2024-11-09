@@ -5,7 +5,7 @@
 package Reservas;
 
 
-class Pago {
+public class Pago {
     
     private double monto;
     private String metodo;

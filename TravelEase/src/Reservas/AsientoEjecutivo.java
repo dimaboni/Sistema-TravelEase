@@ -5,7 +5,7 @@
 package Reservas;
 
 
-class AsientoEjecutivo extends Asiento {
+public class AsientoEjecutivo extends Asiento {
     
     public AsientoEjecutivo(int idAsiento) {
         super(idAsiento);
