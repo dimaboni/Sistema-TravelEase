@@ -5,7 +5,7 @@
 package Reservas;
 
 
-public class Usuario {
+public class Usuario implements Observer{
     
     private String nombre;
     private String email;
@@ -21,6 +21,14 @@ public class Usuario {
 
     public String getEmail() {
         return email;
+    }
+
+    @Override
+    public void actualizarReserva(Reserva reserva) {
+        
+         System.out.println("Hola " + nombre + ", el estado de tu reserva con ID " 
+                           + reserva.getIdReserva() + " ha cambiado a: " + reserva.getEstado());
+        
     }
     
 }
