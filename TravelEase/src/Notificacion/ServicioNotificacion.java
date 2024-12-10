@@ -10,14 +10,21 @@ package Notificacion;
  */
 public class ServicioNotificacion {
     
-    private Notificador notificador;
+    private static ServicioNotificacion instancia;
 
-    public ServicioNotificacion(Notificador notificador) {
-        this.notificador = notificador;
+    // Constructor privado para Singleton
+    private ServicioNotificacion() {}
+
+    // Método para obtener la instancia única
+    public static ServicioNotificacion getInstancia() {
+        if (instancia == null) {
+            instancia = new ServicioNotificacion();
+        }
+        return instancia;
     }
 
-    public void enviarNotificacion(String mensaje) {
-        notificador.enviarNotificacion(mensaje);
+    // Método para enviar notificaciones
+    public void enviarNotificacion(Notificador notificador, String msg) {
+        notificador.enviarNotificacion(msg);
     }
-    
 }
