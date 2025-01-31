@@ -6,6 +6,14 @@ class AgenteSoporte {
     private String idAgente;
     private String nombre;
 
+    private DepartamentoServicioCliente departamento;
+    public AgenteSoporte(DepartamentoServicioCliente departamento) {
+        this.departamento = departamento;
+    }
+    public void escalarIncidencia(Incidencia incidencia) {
+        departamento.trabajarEnResolucion(incidencia);
+    }
+
     public AgenteSoporte(String idAgente, String nombre) {
         this.idAgente = idAgente;
         this.nombre = nombre;

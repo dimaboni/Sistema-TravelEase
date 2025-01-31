@@ -4,8 +4,13 @@
  */
 package Incidencia;
 
-import java.util.Date;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import Reservas.Observer;
+import Reservas.Reserva;
 /**
  *
  * @author richardo
@@ -15,6 +20,7 @@ class Incidencia {
     private Date fechaReporte;
     private AgenteSoporte agenteAsignado;
     private String estado;
+    private List<Observer> observers = new ArrayList<>();
 
     public Incidencia(String descripcion) {
         this.descripcion = descripcion;
@@ -57,5 +63,11 @@ class Incidencia {
     
     public void setEstado(String e){
         this.estado = e;
+    }
+
+    public void notifyObservers(Reserva reserva) {
+        for (Observer observer : observers) {
+            observer.actualizarReserva(reserva);
+        }
     }
 }
